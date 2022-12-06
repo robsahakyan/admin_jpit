@@ -1,16 +1,6 @@
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { useContext } from "react";
-// import Home from "./pages/Home";
-// import Tables from "./pages/Tables";
-// import Billing from "./pages/Billing";
-// import Rtl from "./pages/Rtl";
-// import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
-// import Users from "./pages/Users";
-// import Main from "./components/layout/Main";
-// import Orders from "./pages/Orders";
-// import ProductsCreate from "./pages/ProductsCreate";
-// import Products from "./pages/Products";
 import "antd/dist/antd.css";
 import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";

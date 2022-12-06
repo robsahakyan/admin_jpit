@@ -1,6 +1,5 @@
 import React from "react";
 import API from "../utils/apis";
-import jwt from "jwt-decode";
 import { toast } from "react-toastify";
 
 let AuthContext;
@@ -18,10 +17,7 @@ class AuthProvider extends React.PureComponent {
       ? this.state.token
       : localStorage.getItem("token");
     if (!tken) return false;
-
-    const decoded = jwt(tken);
-
-    if (Date.now() / 1000 > decoded.exp - 5) {
+    if (Date.now() / 1000 > tken.exp - 5) {
       localStorage.clear();
       toast.error("Session has expired, please re-login");
       return false;
